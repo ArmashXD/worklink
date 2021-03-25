@@ -1,0 +1,11 @@
+.primary-btn{    
+    color: #fff;
+    background-color: $green !important;
+    border-color: $green !important;
+}
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+}

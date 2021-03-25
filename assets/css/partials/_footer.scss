@@ -1,0 +1,9 @@
+footer {
+  padding: 2em 0;
+  a {
+    color: $green;
+    &:hover {
+      color: $green;
+    }
+  }
+}

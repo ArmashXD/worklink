@@ -1,0 +1,41 @@
+{
+  "name": "worklink",
+  "version": "1.0.0",
+  "description": "Service At Your Door Step, On Your Fingertips",
+  "author": "Muhammad naveed nasib",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@nuxtjs/auth": "^4.8.5",
+    "@nuxtjs/axios": "^5.9.5",
+    "@nuxtjs/component-cache": "^1.1.6",
+    "@nuxtjs/sitemap": "^2.4.0",
+    "ant-design-vue": "^1.5.3",
+    "bootstrap": "^4.1.3",
+    "bootstrap-vue": "^2.0.0",
+    "dotenv": "^8.2.0",
+    "js-cookie": "^2.2.1",
+    "laravel-echo": "^1.8.0",
+    "laravel-vue-pagination": "^2.3.1",
+    "node-sass": "^4.0.0",
+    "nuxt": "^2.0.0",
+    "pusher-js": "4.3.1",
+    "sass-loader": "^8.0.2",
+    "socket.io-client": "^2.3.0",
+    "vee-validate": "^3.2.5",
+    "vue-google-autocomplete": "^1.1.0",
+    "vue-multiselect": "^2.1.6",
+    "vue-social-auth": "^1.4.5",
+    "vue-social-sharing": "^3.0.4",
+    "vue2-google-maps": "^0.10.7",
+    "vuex-persistedstate": "^3.0.1"
+  },
+  "devDependencies": {
+    "@nuxtjs/laravel-echo": "^1.1.0"
+  }
+}

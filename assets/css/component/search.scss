@@ -1,0 +1,19 @@
+.search-from {
+  @include vp_max("786px") {
+    .i-f {
+      margin-bottom: 0.5rem;
+    }
+    .ant-form-item{
+      margin-bottom:0;
+    }  
+  }  
+}
+
+.masonry-with-flex{
+  @include vp_max("786px") {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    max-height: fit-content;
+  }
+
+}

@@ -1,0 +1,37 @@
+.main-banner {
+  position: relative;
+  // overflow: hidden;
+  // background-image: url(https://assets.taskrabbit.com/v3/assets/homepage/hero-img-desktop.jpg);
+  min-height: 30vh;
+  background-repeat: no-repeat;
+  @include vp_max("786px") {
+    padding: 0;
+    background-image: none;
+    h1 {
+      font-size: 2em;
+      br {
+        display: none;
+      }
+    }
+    button {
+      width: 50%;
+      font-size: 1.5em;
+    }
+  }
+  article{   background: rgba(0, 0, 0, 0.6);position: relative;z-index: 2;
+    color:white;
+    @include vp_max("786px"){
+      background:#2fdf84;
+    }
+  h1,button{color:white !important;}
+}
+  .bg-slider{position: absolute;
+    z-index: 1;
+    top: 0;
+    width: 100%;
+    overflow: hidden;
+    left: 0;
+    height: 100%;
+  img{max-width: 100%;width:100%;}
+}
+}

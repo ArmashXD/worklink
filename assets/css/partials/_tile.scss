@@ -1,0 +1,39 @@
+.job-tile {
+  margin-top: 2em;  
+  padding-bottom: 0;
+  .inner-container {
+    margin-top: 1em;
+    padding: 1em;
+    height: 100%;
+    position: relative;
+    // padding-bottom: 40px;
+  }
+  .tile-footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 0.5em;
+    left: 0;}
+    a {
+      color: inherit !important;}
+}
+
+.img-sm-card-container {
+  max-height: 120px;
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+ height: 120px;
+  .helperF{vertical-align: middle;
+    height: 100%;
+    display: inline-block;
+    width: 1px;}
+  img{max-width: 97%;max-height: 120px;}
+}
+
+.job-list{
+  @include vp_min("786px") { 
+.img-sm-card-container{width:30%;float: left;}
+.detail{width:70%;float: left; padding-left: 5px;}
+  }
+}

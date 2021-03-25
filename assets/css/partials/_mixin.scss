@@ -1,0 +1,173 @@
+/*********************
+  Mixins
+**********************/
+
+@mixin box-shadow-2($args1, $args2) {
+    -webkit-box-shadow: $args1, $args2;
+    -moz-box-shadow: $args1, $args2;
+    box-shadow: $args1, $args2;
+}
+@mixin box-shadow($arg){
+    -webkit-box-shadow: $arg;
+    -moz-box-shadow:$arg;
+    box-shadow:$arg;
+}
+
+@mixin card-variant($background, $color, $border) {
+    background-color: $background;
+    color: $color;
+    .card-footer,
+    .card-header {
+        border-color: $border;
+    }
+    a {
+        color: $color;
+    }
+}
+
+// Button sizes
+@mixin button-size($padding-vertical, $padding-horizontal, $font-size, $line-height) {
+    padding: $padding-vertical $padding-horizontal;
+    font-size: $font-size;
+    line-height: $line-height;
+}
+
+@mixin border-radius($args) {
+    -webkit-border-radius: $args;
+    -moz-border-radius: $args;
+    -ms-border-radius: $args;
+    -o-border-radius: $args;
+    border-radius: $args;
+}
+
+@mixin oc-auto-height ($oc-height) {
+    -webkit-transition: $oc-height;
+    -moz-transition: $oc-height;
+    -ms-transition: $oc-height;
+    -o-transition: $oc-height;
+    transition: $oc-height;
+}
+
+// Title padding
+@mixin title-pad () {
+    padding-left: 1rem;
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+    margin-bottom: 2rem;
+}
+
+
+/*opacity*/
+@mixin opacity($opacity-value) {
+    -khtml-opacity: $opacity-value;
+    -moz-opacity: $opacity-value;
+    opacity: $opacity-value;
+    $opacity-ie: $opacity-value * 100;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="+$opacity-ie+")";
+    filter: alpha(opacity=$opacity-ie);
+}
+
+/*opacity*/
+@mixin grayscale($grayscale-value){
+    -webkit-filter: grayscale(1);
+    -moz-filter: grayscale(1);
+    filter: grayscale(1);
+}
+
+/*=========================== media query mixin=================*/
+
+@mixin vp_range($min_px,$max_px) {
+
+
+    @media (min-width: $min_px) and (max-width: $max_px){
+
+        @content;
+
+    }
+
+}
+@mixin vp_max($pxSize) {
+
+
+    @media (max-width: $pxSize) {
+
+        @content;
+
+    }
+
+}
+
+@mixin vp_min($pxSize) {
+
+
+    @media (min-width: $pxSize) {
+
+        @content;
+
+    }
+
+}
+
+// generic transform
+@mixin transform($transforms) {
+    -moz-transform: $transforms;
+    -o-transform: $transforms;
+    -ms-transform: $transforms;
+    -webkit-transform: $transforms;
+    transform: $transforms;
+}
+// rotate
+@mixin rotate ($deg) {
+    @include transform(rotate(#{$deg}deg));
+}
+
+// scale
+@mixin scale($scale) {
+    @include transform(scale($scale));
+}
+// translate
+@mixin translate ($x, $y) {
+    @include transform(translate($x, $y));
+}
+// skew
+@mixin skew ($x, $y) {
+    @include transform(skew(#{$x}deg, #{$y}deg));
+}
+//transform origin
+@mixin transform-origin ($origin) {
+    moz-transform-origin: $origin;
+    -o-transform-origin: $origin;
+    -ms-transform-origin: $origin;
+    -webkit-transform-origin: $origin;
+    transform-origin: $origin;
+}
+
+/*=========================== media query mixin =================*/
+
+//placeholder color
+@mixin placeholder-color($color) {
+  &::-webkit-input-placeholder { /* WebKit browsers */
+      color: $color;
+  }
+  &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+      color: $color;
+  }
+  &::-moz-placeholder { /* Mozilla Firefox 19+ */
+      color: $color;
+  }
+  &:-ms-input-placeholder { /* Internet Explorer 10+ */
+      color: $color;
+  }
+}
+
+
+
+@mixin bi_gre($primary,$secondary){
+    background: $primary;
+    background: -moz-linear-gradient(left, $primary 0%, $secondary 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, $secondary), color-stop(100%, $secondary));
+    background: -webkit-linear-gradient(left, $primary 0%, $secondary 100%);
+    background: -o-linear-gradient(left, $primary 0%, $secondary 100%);
+    background: -ms-linear-gradient(left, $primary 0%, $secondary 100%);
+    background: linear-gradient(to right, $primary 0%, $secondary 100%);
+}
